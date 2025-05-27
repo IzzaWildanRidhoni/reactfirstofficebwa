@@ -4,7 +4,6 @@ import { Office } from "../types/type";
 import axios from "axios";
 import { Link } from "react-router-dom";
 export default function BrowseOfficeWrapper() {
-
   const [offices, setOffices] = useState<Office[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -13,7 +12,7 @@ export default function BrowseOfficeWrapper() {
     axios
       .get("http://127.0.0.1:8000/api/offices", {
         headers: {
-          "X-API-KEY": "sdnasodgqueg1241uiofwenbfuwghr29jksdfas",
+          "X-API-KEY": "wqeqweqweknjbsjf23213jbdjfsdfsdfjk34423",
         },
       })
       .then((response) => {
@@ -52,5 +51,5 @@ export default function BrowseOfficeWrapper() {
         ))}
       </div>
     </section>
-  )
+  );
 }
